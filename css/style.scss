@@ -41,7 +41,7 @@ $lightGrayishBlue: hsl(210, 46%, 95%);
   height: 300px;
   .img {
     width: 300px;
-    background-image: url("/images/drawers.jpg");
+    background-image: url("../images/drawers.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
@@ -99,13 +99,10 @@ $lightGrayishBlue: hsl(210, 46%, 95%);
         &:hover {
           cursor: pointer;
           background-color: $veryDarkGrayishBlue;
-          fill: hsl(210, 46%, 95%);
         }
         &:focus {
           outline: transparent;
-        }
-        &:focus path {
-          fill: #fff;
+          background-color: $veryDarkGrayishBlue;
         }
       }
     }
@@ -148,6 +145,25 @@ $lightGrayishBlue: hsl(210, 46%, 95%);
   visibility: hidden;
   opacity: 0;
   transition: 0.5s;
+}
+
+a {
+  position: relative;
+}
+
+a:focus {
+  outline: transparent;
+  border: none;
+}
+
+a:focus::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  padding: 1px;
+  background-color: $lightGrayishBlue;
 }
 
 @import "media";

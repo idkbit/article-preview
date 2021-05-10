@@ -50,7 +50,7 @@
 
 .content .img {
   width: 300px;
-  background-image: url("/images/drawers.jpg");
+  background-image: url("../images/drawers.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
@@ -159,15 +159,11 @@
 .content .tips .info .share:hover {
   cursor: pointer;
   background-color: #48556a;
-  fill: #ecf2f8;
 }
 
 .content .tips .info .share:focus {
   outline: transparent;
-}
-
-.content .tips .info .share:focus path {
-  fill: #fff;
+  background-color: #48556a;
 }
 
 .popup {
@@ -223,6 +219,25 @@
   opacity: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+a {
+  position: relative;
+}
+
+a:focus {
+  outline: transparent;
+  border: none;
+}
+
+a:focus::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  padding: 1px;
+  background-color: #ecf2f8;
 }
 
 @media screen and (max-width: 1000px) {

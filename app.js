@@ -3,12 +3,20 @@ const btn = document.querySelector(".share");
 const wrapper = document.querySelector(".wrapper");
 
 wrapper.addEventListener("click", e => {
-  if (e.target === btn || e.target === popup) {
-    return;
-  } else {
+  if (e.target === btn || e.target === popup) return;
+  else {
     popup.classList.add("hidden");
   }
 })
 btn.addEventListener("click", () => {
-  popup.classList.toggle("hidden");
+  if (popup.classList.contains("hidden")) {
+    popup.classList.toggle("hidden");
+
+  }
+});
+
+btn.addEventListener("focus", () => {
+  if (popup.classList.contains("hidden")) {
+    popup.classList.remove("hidden");
+  }
 })
