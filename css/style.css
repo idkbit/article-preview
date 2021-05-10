@@ -220,6 +220,9 @@
 
 .hidden {
   visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 @media screen and (max-width: 1000px) {

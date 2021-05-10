@@ -146,6 +146,8 @@ $lightGrayishBlue: hsl(210, 46%, 95%);
 
 .hidden {
   visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
 }
 
 @import "media";
