@@ -8,15 +8,7 @@ wrapper.addEventListener("click", e => {
     popup.classList.add("hidden");
   }
 })
+
 btn.addEventListener("click", () => {
-  if (popup.classList.contains("hidden")) {
-    popup.classList.toggle("hidden");
-
-  }
-});
-
-btn.addEventListener("focus", () => {
-  if (popup.classList.contains("hidden")) {
-    popup.classList.remove("hidden");
-  }
+  popup.classList.toggle("hidden");
 })
