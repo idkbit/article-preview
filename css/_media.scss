@@ -1,0 +1,5 @@
+@media screen and (max-width: 930px) {
+  .content {
+    @include flex(column, flex-start, flex-start);
+  }
+}

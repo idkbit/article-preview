@@ -1,0 +1,176 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+}
+
+.wrapper {
+  min-height: 100vh;
+  background-color: #ecf2f8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-radius: 10px;
+  height: 300px;
+}
+
+.content .img {
+  width: 300px;
+  background-image: url("/images/drawers.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  border-radius: 10px 0 0 10px;
+}
+
+.content .tips {
+  height: 300px;
+  width: 600px;
+  padding: 30px;
+  background-color: #fff;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.content .tips .heading {
+  color: #48556a;
+  margin-bottom: 20px;
+}
+
+.content .tips .text {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #6d7f97;
+}
+
+.content .tips .info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content .tips .info .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.content .tips .info .photo {
+  height: 50px;
+  border-radius: 50%;
+}
+
+.content .tips .info .container {
+  padding-left: 30px;
+}
+
+.content .tips .info .container .name {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.content .tips .info .container .date {
+  color: #d1d2e0;
+}
+
+.content .tips .info .share {
+  padding: 5px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background-color: #ecf2f8;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.content .tips .info .share:hover {
+  cursor: pointer;
+  background-color: #48556a;
+  fill: #ecf2f8;
+}
+
+@media screen and (max-width: 930px) {
+  .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+/*# sourceMappingURL=style.css.map */

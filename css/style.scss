@@ -1,0 +1,104 @@
+// Reset defaults
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// variables
+
+$veryDarkGrayishBlue: hsl(217, 19%, 35%);
+$desaturatedDarkBlue: hsl(214, 17%, 51%);
+$grayishBlue: hsl(212, 23%, 69%);
+$lightGrayishBlue: hsl(210, 46%, 95%);
+
+// mixin
+
+@mixin flex($flex-direction, $justify, $align) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+:root {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+}
+
+.wrapper {
+  min-height: 100vh;
+  background-color: $lightGrayishBlue;
+  @include flex(row, center, center);
+}
+
+.content {
+  @include flex(row, flex-start, flex-start);
+  border-radius: 10px;
+  height: 300px;
+  .img {
+    width: 300px;
+    background-image: url("/images/drawers.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+  }
+  .tips {
+    height: 300px;
+    width: 600px;
+    padding: 30px;
+    background-color: #fff;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    @include flex(column, space-between, flex-start);
+    .heading {
+      color: $veryDarkGrayishBlue;
+      margin-bottom: 20px;
+    }
+    .text {
+      margin-bottom: 20px;
+      font-size: 16px;
+      color: $desaturatedDarkBlue;
+    }
+    .info {
+      width: 100%;
+      @include flex(row, space-between, center);
+      .profile {
+        @include flex(row, flex-start, flex-start);
+      }
+      .photo {
+        height: 50px;
+        border-radius: 50%;
+      }
+      .container {
+        padding-left: 30px;
+        .name {
+          font-size: 16px;
+          margin-bottom: 5px;
+        }
+        .date {
+          color: hsl(236deg, 19%, 85%);
+        }
+      }
+      .share {
+        padding: 5px;
+
+        border: 2px solid transparent;
+        border-radius: 50%;
+        background-color: $lightGrayishBlue;
+        transition: 0.5s;
+        &:hover {
+          cursor: pointer;
+          background-color: $veryDarkGrayishBlue;
+          fill: hsl(210, 46%, 95%);
+        }
+      }
+    }
+  }
+}
+
+@import "media";
