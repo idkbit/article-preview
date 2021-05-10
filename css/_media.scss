@@ -1,4 +1,4 @@
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 1000px) {
   .content {
     @include flex(column, flex-start, flex-start);
     height: auto;
@@ -36,5 +36,13 @@
         }
       }
     }
+  }
+}
+
+.popup {
+  right: 0;
+  bottom: 90px;
+  &::after {
+    left: 75%;
   }
 }

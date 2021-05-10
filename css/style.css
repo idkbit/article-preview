@@ -64,6 +64,7 @@
   background-color: #fff;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -169,7 +170,59 @@
   fill: #fff;
 }
 
-@media screen and (max-width: 930px) {
+.popup {
+  background-color: #48556a;
+  padding: 10px 30px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 200px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100px;
+  right: -50px;
+}
+
+.popup::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  z-index: 10;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #48556a;
+}
+
+.popup p {
+  color: #6d7f97;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 13px;
+}
+
+.popup img {
+  width: 75%;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 1000px) {
   .content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -216,5 +269,14 @@
   .content .tips .info .share {
     margin-left: 0;
   }
+}
+
+.popup {
+  right: 0;
+  bottom: 90px;
+}
+
+.popup::after {
+  left: 75%;
 }
 /*# sourceMappingURL=style.css.map */

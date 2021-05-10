@@ -54,6 +54,7 @@ $lightGrayishBlue: hsl(210, 46%, 95%);
     background-color: #fff;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    position: relative;
     @include flex(column, space-between, flex-start);
     .heading {
       color: $veryDarkGrayishBlue;
@@ -109,6 +110,42 @@ $lightGrayishBlue: hsl(210, 46%, 95%);
       }
     }
   }
+}
+
+.popup {
+  background-color: $veryDarkGrayishBlue;
+  padding: 10px 30px;
+  border-radius: 10px;
+  @include flex(row, space-between, center);
+  width: 200px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100px;
+  right: -50px;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    z-index: 10;
+    transform: translateX(-50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid $veryDarkGrayishBlue;
+  }
+  p {
+    color: $desaturatedDarkBlue;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 13px;
+  }
+  img {
+    width: 75%;
+  }
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 @import "media";
