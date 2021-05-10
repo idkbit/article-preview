@@ -1,5 +1,40 @@
 @media screen and (max-width: 930px) {
   .content {
     @include flex(column, flex-start, flex-start);
+    height: auto;
+    width: 350px;
+    margin: 50px 30px;
+    .img {
+      height: 240px;
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+    }
+    .heading {
+      font-size: 1rem;
+    }
+    .text {
+      font-weight: 400;
+    }
+    .tips {
+      width: 100%;
+      height: auto;
+      padding: 30px;
+      border-radius: 0 0 10px 10px;
+      .info {
+        .container {
+          .name {
+            font-size: 13px;
+            color: $veryDarkGrayishBlue;
+            opacity: 0.9;
+          }
+          .date {
+            font-size: 13px;
+          }
+        }
+        .share {
+          margin-left: 0;
+        }
+      }
+    }
   }
 }
